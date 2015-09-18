@@ -1,0 +1,47 @@
+<%=@@test_var%>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <br>
+        <h1><%="Latest growl is "%></h1>
+        <%=@post%>
+        <br>
+        <h1><%=" All growls "%></h1>
+
+
+        <%for x in 0..@@growl_array.length-1%>
+            <div class="growl" > <%=@@growl_array[x]%></div>
+        <%end %>
+
+
+        <h2>Enter your growl</h2>
+        </div>
+        <form name="form_item" action="/" method="post" >
+            <input type="text" name="post1" maxlength="142"> 
+            <input class="submit_button" type="submit" value="submit">
+        </form>
+
+        <form name="form_item" action="/reset" method="post">
+            <input type="submit" value="Reset">
+        </form>
+        <script> 
+        $( document ).ready(function(){
+
+            var width = $(".growl").css("width");
+            $(".growl").css("height",width);
+            // $(this).css("background-color","red")
+            var clickCounter = 0;
+            $(".submit_button").click(function(){
+                // event.preventDefault();
+                 // console.log(clickCounter)
+                // clickCounter++;
+                
+                // 
+  
+            });
+        });
+        </script>
+    </body>
+</html>

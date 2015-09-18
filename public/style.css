@@ -1,0 +1,23 @@
+input{
+    color: #35a59a;
+    background-color: white;
+}
+.growl{
+    color:white;
+
+    display: inline-block;
+    word-wrap: break-word;
+    /*width:auto;*/
+    /*height:auto;*/
+    padding: 3px;
+    margin:20px;
+    background: #35a59a;
+    border-style: solid;
+    border: 10px;
+    border-radius: 100%;
+}
+
+h1 {
+    background-color:#f0f8ff;
+    color: #4a4849;
+}
