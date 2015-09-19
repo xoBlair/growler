@@ -12,12 +12,10 @@
 
 
         <%for x in 0..@@growl_array.length-1%>
-            <div class="growl" > <%=@@growl_array[x]%></div>
+            <div class="growl <%=x%>"> <%=@@growl_array[x]%></div>
         <%end %>
 
-
         <h2>Enter your growl</h2>
-        </div>
         <form name="form_item" action="/" method="post" >
             <input type="text" name="post1" maxlength="142"> 
             <input class="submit_button" type="submit" value="submit">
@@ -27,21 +25,16 @@
             <input type="submit" value="Reset">
         </form>
         <script> 
-        $( document ).ready(function(){
-
-            var width = $(".growl").css("width");
-            $(".growl").css("height",width);
-            // $(this).css("background-color","red")
-            var clickCounter = 0;
-            $(".submit_button").click(function(){
-                // event.preventDefault();
-                 // console.log(clickCounter)
-                // clickCounter++;
-                
-                // 
-  
+            $(document).ready(function(){
+                var length =<%=@@growl_array.length%>;
+                for(var i = 0; i < length; i ++)
+                {
+                    var lengthReplacement = i;
+                    var lengthy = "." + lengthReplacement;
+                    var width = $(lengthy).css("width");
+                    $(lengthy).css("height",width);
+                }
             });
-        });
         </script>
     </body>
 </html>
